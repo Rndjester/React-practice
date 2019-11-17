@@ -3,7 +3,7 @@ import classes from './Drawer.module.css'
 import Backdrop from '../../UI/Backdrop/Backdrop'
 
 const links = [
-    1, 2, 3
+    "Санкт-петербург", "История России", "Законы природы"
 ]
 
 class Drawer extends Component {
@@ -11,7 +11,7 @@ class Drawer extends Component {
         return links.map ((link, index) => {
             return (
                 <li key = {index}>
-                    <a>Link {link}</a>
+                    <a>{link}</a>
                 </li>
             )   
         })
@@ -25,6 +25,7 @@ class Drawer extends Component {
         return (
             <React.Fragment>
                 <nav className = {cls.join(' ')}>
+                    <h1>Категории: </h1>
                     <ul>
                         {this.renderLinks()}
                     </ul>
